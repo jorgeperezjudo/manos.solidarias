@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', 'LiveSearch@index');
-Route::get('/action', 'LiveSearch@action')->name('live_search.action');
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+Route::get('/', function () {
+    return view('welcome');
 });
